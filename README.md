@@ -1,4 +1,4 @@
-yhg´[tp-0o=erfdd=================================================================================================================================================================================================ol-gfv4p´jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj<h1> Projeto Ciencia de Dados - Análise de Turismo Global</h1>
+<h1> Projeto Ciencia de Dados - Análise de Turismo Global</h1>
 
 <hr>
 <br>
@@ -19,47 +19,63 @@ Tem como objetivo analisar o turismo global. A análise foca em três principais
 
 <h1>2. Tecnologias Utilizadas</h1>
 
-Linguagem: Python
+<h3><b>Bibliotecas Utilizadas - Python:</b></h3>
 
-Bibliotecas:
+<b>streamlit:</b> Para criar a interface gráfica do dashboard.
 
-streamlit: Para criar a interface do dashboard.
+<b>pandas:</b> Para manipulação e análise dos dados.
 
-pandas: Para manipulação e análise dos dados.
+<b>plotly.express:</b> Para visualização dos dados de forma interativa.
 
-plotly.express: Para visualização dos dados de forma interativa.
+<hr>
+<br>
 
-3. Fonte dos Dados
+<h1>3. Fonte dos Dados</h1>
 
-Os dados foram obtidos do arquivo world_tourism_economy_data.csv. As principais colunas utilizadas incluem:
+Os dados foram retirados de um arquivo delimitado por vírgula, com a extensão .csv
 
-country: Nome do país.
+Com as seguintes colunas
 
-year: Ano da observação.
+<br>
 
-tourism_arrivals: Número de chegadas de turistas.
+<b>country:</b> Nome do país.
 
-tourism_receipts: Receita gerada pelo turismo.
+<b>year:</b> Ano da observação.
 
-tourism_exports: Exportações relacionadas ao turismo.
+<b>tourism_arrivals:</b> Número de chegadas de turistas.
 
-tourism_departures: Saídas de turistas.
+<b>tourism_receipts:</b> Receita gerada pelo turismo.
 
-tourism_expenditures: Gastos com turismo.
+<b>tourism_exports:</b> Exportações relacionadas ao turismo.
 
-gdp: PIB do país.
+<b>tourism_departures:</b> Saídas de turistas.
 
-inflation: Índice de inflação.
+<b>tourism_expenditures:</b> Gastos com turismo.
 
-unemployment: Taxa de desemprego.
+<b>gdp:</b> PIB do país.
 
-4. Processo de ETL (Extração, Transformação e Carga)
+<b>inflation:</b> Índice de inflação.
+
+<b>unemployment:</b> Taxa de desemprego.
+
+<hr>
+<br>
+
+<h1>4. Processo de ETL (Extração, Transformação e Carga)</h1>
 
 Antes de realizar as análises, os dados passam por um tratamento que inclui:
 
-Carregamento dos Dados:
+<h3><b>Carregamento dos Dados:</b></h3>
 
 O arquivo CSV é carregado em um DataFrame Pandas.
+```python
+def load_data():
+    file_path = "world_tourism_economy_data.csv"
+    df = pd.read_csv(file_path)
+    return df
+
+df = load_data()
+```
 
 Limpeza e Tratamento:
 
